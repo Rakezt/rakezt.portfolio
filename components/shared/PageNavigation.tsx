@@ -16,14 +16,15 @@ export default function PageNavigation() {
     currentIndex < pageOrder.length - 1 ? pageOrder[currentIndex + 1] : null;
 
   return (
-    <div className='flex justify-between items-center mt-32 w-full'>
+    <div className='flex justify-between items-center mt-32'>
       {prevPage ? (
         <Link
           href={prevPage.href}
-          className='flex items-center gap-3 text-muted-foreground hover:text-primary'
+          className='flex items-center gap-2 text-muted-foreground hover:text-primary'
         >
-          <ChevronLeft size={18} />
-          {prevPage.label}
+          <div className='flex'>
+            <ChevronLeft size={25} /> Go to {prevPage.label}
+          </div>
         </Link>
       ) : (
         <div />
@@ -32,10 +33,12 @@ export default function PageNavigation() {
       {nextPage && (
         <Link
           href={nextPage.href}
-          className='flex items-center gap-3 text-muted-foreground hover:text-primary'
+          className='flex items-center gap-2 text-muted-foreground hover:text-primary'
         >
-          {nextPage.label}
-          <ChevronRight size={18} />
+          <div className='flex'>
+            Go to {nextPage.label}
+            <ChevronRight size={25} />
+          </div>
         </Link>
       )}
     </div>
