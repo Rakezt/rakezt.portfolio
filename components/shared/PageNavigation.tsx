@@ -16,7 +16,7 @@ export default function PageNavigation() {
     currentIndex < pageOrder.length - 1 ? pageOrder[currentIndex + 1] : null;
 
   return (
-    <div className='flex justify-between items-center mt-32'>
+    <div className='flex justify-between items-center mt-32 w-full'>
       {prevPage ? (
         <Link
           href={prevPage.href}
