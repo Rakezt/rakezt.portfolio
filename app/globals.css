@@ -1,20 +1,31 @@
 @import 'tailwindcss';
 
+/* ===============================
+   THEME VARIABLES
+================================ */
+
 :root {
+  /* Base */
   --background: 210 20% 98%;
   --foreground: 222 15% 20%;
 
+  /* Surfaces */
   --card: 210 20% 96%;
   --border: 220 13% 90%;
+
+  /* Muted */
   --muted: 210 20% 92%;
   --muted-foreground: 220 10% 45%;
 
-  --primary: 222 47% 45%;
+  /* Primary */
+  --primary: 200 60% 55%;
   --primary-foreground: 210 20% 98%;
 
+  /* Accent */
   --accent: 200 60% 55%;
   --accent-foreground: 210 20% 98%;
 
+  /* Effects */
   --shadow-color: 220 40% 2%;
   --glow-color: 222 70% 60%;
 }
@@ -25,10 +36,11 @@
 
   --card: 222 15% 14%;
   --border: 222 10% 25%;
+
   --muted: 222 15% 18%;
   --muted-foreground: 210 10% 65%;
 
-  --primary: 220 70% 60%;
+  --primary: 180 60% 50%;
   --primary-foreground: 222 15% 10%;
 
   --accent: 180 60% 50%;
@@ -38,8 +50,188 @@
   --glow-color: 220 80% 70%;
 }
 
+/* ===============================
+   BASE STYLES
+================================ */
+
 body {
   background: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Smooth transitions everywhere */
+* {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+/* ===============================
+   GLOBAL INTERACTIONS
+================================ */
+
+/* All interactive elements */
+a,
+button,
+[role='button'],
+.interactive {
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+/* ===============================
+   CLEAN INTERACTIONS (FIXED)
+================================ */
+
+/* LINKS → clean, minimal */
+a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+a:hover {
+  color: hsl(var(--primary));
+  transform: scale(1.05);
+}
+
+/* underline animation */
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background: hsl(var(--primary));
+  transition: width 0.25s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   BUTTONS / INTERACTIVE ELEMENTS ONLY
+================================ */
+
+button,
+[role='button'],
+.interactive {
+  transition: all 0.25s ease;
+}
+
+button:hover,
+[role='button']:hover,
+.interactive:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 20px hsl(var(--shadow-color) / 0.15),
+    0 0 0 2px hsl(var(--glow-color) / 0.15);
+}
+
+button:active,
+[role='button']:active,
+.interactive:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px hsl(var(--shadow-color) / 0.2);
+}
+
+/* Active (click feel) */
+a:active,
+button:active,
+[role='button']:active,
+.interactive:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px hsl(var(--shadow-color) / 0.2);
+}
+
+/* ===============================
+   ICON HOVER (SVG)
+================================ */
+
+svg {
+  transition: all 0.25s ease;
+}
+
+svg:hover {
+  transform: translateY(-1px) scale(1.05);
+  filter: drop-shadow(0 4px 10px hsl(var(--glow-color) / 0.35));
+}
+
+/* ===============================
+   LINK UNDERLINE ANIMATION
+================================ */
+
+a {
+  text-decoration: none;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background: hsl(var(--primary));
+  transition: width 0.25s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   CARD / SURFACE STYLING
+================================ */
+
+.card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px hsl(var(--shadow-color) / 0.08);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 30px hsl(var(--shadow-color) / 0.15),
+    0 0 0 1px hsl(var(--glow-color) / 0.15);
+}
+
+/* ===============================
+   SELECTION STYLE
+================================ */
+
+::selection {
+  background: hsl(var(--primary) / 0.2);
+}
+
+/* ===============================
+   OPTIONAL UTILITIES
+================================ */
+
+/* Softer hover (use when needed) */
+.interactive-soft:hover {
+  box-shadow:
+    0 4px 12px hsl(var(--shadow-color) / 0.1),
+    0 0 0 1px hsl(var(--glow-color) / 0.1);
+}
+
+/* Disable heavy hover when needed */
+.no-hover:hover {
+  box-shadow: none !important;
+  transform: none !important;
 }

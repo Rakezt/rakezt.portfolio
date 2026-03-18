@@ -23,6 +23,7 @@ export const ThemeToggle = () => {
 
   return (
     <Button
+      className='cursor-pointer'
       variant='ghost'
       size='icon'
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
