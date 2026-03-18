@@ -2,7 +2,7 @@ export const experiences = [
   {
     role: 'Senior Analyst (Full Stack Developer – MERN)',
     company: 'R1 RCM',
-    period: '2022 – Present',
+    period: '2023 – Present',
     current: true,
     description:
       'Working as a Full-Stack MERN developer building scalable enterprise applications, REST APIs, and responsive UI using modern JavaScript frameworks.',
