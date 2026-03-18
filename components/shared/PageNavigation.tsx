@@ -20,7 +20,7 @@ export default function PageNavigation() {
       {prevPage ? (
         <Link
           href={prevPage.href}
-          className='flex items-center gap-2 text-muted-foreground hover:text-primary'
+          className='flex items-center gap-3 text-muted-foreground hover:text-primary'
         >
           <ChevronLeft size={18} />
           {prevPage.label}
@@ -32,7 +32,7 @@ export default function PageNavigation() {
       {nextPage && (
         <Link
           href={nextPage.href}
-          className='flex items-center gap-2 text-muted-foreground hover:text-primary'
+          className='flex items-center gap-3 text-muted-foreground hover:text-primary'
         >
           {nextPage.label}
           <ChevronRight size={18} />
