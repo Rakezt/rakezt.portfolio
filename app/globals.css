@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+:root {
+  --background: 210 20% 98%;
+  --foreground: 222 15% 20%;
+
+  --card: 210 20% 96%;
+  --border: 220 13% 90%;
+  --muted: 210 20% 92%;
+  --muted-foreground: 220 10% 45%;
+
+  --primary: 222 47% 45%;
+  --primary-foreground: 210 20% 98%;
+
+  --accent: 200 60% 55%;
+  --accent-foreground: 210 20% 98%;
+
+  --shadow-color: 220 40% 2%;
+  --glow-color: 222 70% 60%;
+}
+
+.dark {
+  --background: 222 15% 10%;
+  --foreground: 210 20% 92%;
+
+  --card: 222 15% 14%;
+  --border: 222 10% 25%;
+  --muted: 222 15% 18%;
+  --muted-foreground: 210 10% 65%;
+
+  --primary: 220 70% 60%;
+  --primary-foreground: 222 15% 10%;
+
+  --accent: 180 60% 50%;
+  --accent-foreground: 222 15% 10%;
+
+  --shadow-color: 0 0% 0%;
+  --glow-color: 220 80% 70%;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
