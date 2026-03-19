@@ -20,17 +20,17 @@ export default function ContactForm() {
     });
   }
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  // function handleSubmit(e: React.FormEvent) {
+  //   e.preventDefault();
 
-    alert('Message submitted!');
+  //   alert('Message submitted!');
 
-    setForm({
-      name: '',
-      email: '',
-      message: '',
-    });
-  }
+  //   setForm({
+  //     name: '',
+  //     email: '',
+  //     message: '',
+  //   });
+  // }
 
   function handleReset() {
     setForm({
@@ -41,7 +41,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='space-y-6 mt-10'>
+    <form className='space-y-6 mt-10'>
       <div>
         <label className='font-medium'>
           Name<span className='text-red-500'>*</span>
@@ -107,6 +107,8 @@ export default function ContactForm() {
           to-purple-600
           hover:opacity-90
           transition cursor-pointer
+          disabled:opacity-50
+    disabled:cursor-not-allowed 
           '
         >
           Submit

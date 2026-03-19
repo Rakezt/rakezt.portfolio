@@ -3,7 +3,7 @@ export const projects = [
     slug: 'zing',
     title: 'Zing ',
     description:
-      'A social network platform where user can manage profile, chat with friends and buy premium features',
+      'A social network platform where user can manage profile, add or reject friend request, chat with friends and buy premium features',
     tech: [
       'Next.js',
       'TypeScript',
@@ -15,6 +15,7 @@ export const projects = [
       'DaisyUI',
       'Socket.IO',
     ],
+    img: 'https://res.cloudinary.com/detngmiyp/image/upload/v1773914805/zing_xhk0t8.png',
     github: 'https://github.com/Rakezt/ZingFE',
     demo: 'https://zing-app.netlify.app/',
   },
@@ -32,6 +33,7 @@ export const projects = [
       'Redis',
       'Cloudinary',
     ],
+    img: 'https://res.cloudinary.com/detngmiyp/image/upload/v1773914806/bang_acnu0p.png',
     github: 'https://github.com/Rakezt/e-com-app',
     demo: 'https://rakeztecommerce.netlify.app/',
   },
@@ -39,8 +41,9 @@ export const projects = [
     slug: 'expense-ai',
     title: 'Lets Track Expense-AI',
     description:
-      'Full-stack expense manager with AI-driven summarization and interactive 3D visualisations for quick money insights.',
+      'An expense manager app with AI-driven summarization and interactive 3D visualisations for quick money insights.',
     tech: ['Next.js', 'Node.js', 'Socket.IO', 'MongoDB', 'Google Gemini'],
+    img: 'https://res.cloudinary.com/detngmiyp/image/upload/v1773914806/expense_mg29n5.png',
     github: 'https://github.com/Rakezt/lets-track-expense-AI',
     demo: 'https://lets-track-expenses-ai.netlify.app/',
   },
@@ -48,7 +51,7 @@ export const projects = [
     slug: 'rakezt-bot',
     title: 'Rakezt Bot',
     description:
-      'AI chat assistant with persistent user history and markdown/code rendering — used for quick prototype testing and demos.',
+      'AI chat assistant with persistent user history. The truth it works like the real Chat GPT',
     tech: [
       'React',
       'Google Gemini',
@@ -57,6 +60,7 @@ export const projects = [
       'OpenAI',
       'Socket.IO',
     ],
+    img: 'https://res.cloudinary.com/detngmiyp/image/upload/v1773914805/chatbot_senpyp.png',
     github: 'https://github.com/Rakezt/gemini-chatbot-FE',
     demo: 'https://rakezt-chatbot.netlify.app/login',
   },
@@ -75,7 +79,18 @@ export const projects = [
       'Redux',
       'MUI',
     ],
+    img: 'https://res.cloudinary.com/detngmiyp/image/upload/v1773915398/poll_eu8pus.png',
     github: 'https://github.com/Rakezt/live-poller-fe',
     demo: 'https://live-poller.netlify.app/login',
   },
 ];
+
+export type Project = {
+  slug: string;
+  title: string;
+  description: string;
+  tech: string[];
+  img: string;
+  github: string;
+  demo: string;
+};

@@ -15,11 +15,11 @@ export default function Home() {
 
       <p className='text-lg text-muted-foreground leading-relaxed max-w-3xl mb-8'>
         I’m a full-stack Software Engineer who enjoys building modern web
-        applications with technologies like Next.js, React, TypeScript, Tailwind
-        CSS, Node.js, Express, and MongoDB. I focus on creating scalable,
-        responsive, and user-friendly solutions while leveraging DevOps
-        practices to improve development workflows and deliver reliable
-        software.
+        applications with technologies like Next.js, React.js, TypeScript,
+        Redux, Tailwind CSS, Node.js, Express, Socket.IO and MongoDB. I focus on
+        creating scalable, responsive, and user-friendly solutions while
+        leveraging DevOps practices to improve development workflows and deliver
+        reliable software.
       </p>
 
       <div className='flex items-center gap-6'>

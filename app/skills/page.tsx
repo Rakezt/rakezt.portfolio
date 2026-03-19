@@ -12,9 +12,12 @@ export default function SkillsPage() {
       />
 
       <p className='text-muted-foreground mt-6 mb-10 max-w-3xl'>
-        As a full-stack Software Engineer, I specialize in building scalable web
-        applications using modern technologies such as Next.js, React, and
-        Tailwind CSS.
+        I build fast, scalable, and real-time web applications using React,
+        Next.js, and TypeScript on the frontend, paired with Node.js, Express,
+        and MongoDB on the backend. From clean UI systems with Tailwind, MUI,
+        and shadcn to secure APIs, JWT auth, and WebSocket-powered features, I
+        focus on performance, reliability, and seamless user experience—backed
+        by modern tooling like Docker, AWS, CI/CD, and Git.
       </p>
 
       <div className='flex flex-wrap gap-3 mt-10'>

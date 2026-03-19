@@ -5,10 +5,7 @@ export const education = [
     period: 'Completed',
     description:
       'Master of Computer Applications with focus on software development, programming fundamentals, and application design.',
-    highlights: [
-      'Strengthened understanding of full-stack development concepts',
-      'Built strong foundation in software engineering and problem-solving',
-    ],
+    highlights: [],
     current: false,
   },
   {
@@ -17,10 +14,7 @@ export const education = [
     period: 'Completed',
     description:
       'Bachelor of Computer Applications covering programming, databases, networking, and application development.',
-    highlights: [
-      'Built early foundation in web development and database systems',
-      'Developed interest in building scalable software solutions',
-    ],
+    highlights: [],
     current: false,
   },
   {

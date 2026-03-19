@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { projects } from '@/data/project';
+import { ProjectImage } from '@/components/shared/ProjectImage';
 
 export default async function ProjectDetail({
   params,
@@ -21,16 +22,20 @@ export default async function ProjectDetail({
       >
         ← Back to projects
       </Link>
-
-      <h1 className='text-4xl font-bold mt-6 mb-4'>{project.title}</h1>
-
+      <div>
+        <h1 className='text-4xl font-bold mt-6 mb-4'>{project.title}</h1>
+        <ProjectImage project={project} />
+      </div>
       <p className='text-muted-foreground mb-8'>{project.description}</p>
 
       <h3 className='text-lg font-semibold mb-3'>Tech Stack</h3>
 
-      <div className='flex flex-wrap gap-2 mb-8'>
+      <div className='flex flex-wrap gap-2 mb-8 '>
         {project.tech.map((tech) => (
-          <span key={tech} className='px-3 py-1 text-sm rounded-lg bg-muted'>
+          <span
+            key={tech}
+            className='px-3 py-1 text-sm rounded-lg bg-muted underline decoration-[hsl(var(--accent))] '
+          >
             {tech}
           </span>
         ))}
