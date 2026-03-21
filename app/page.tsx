@@ -8,8 +8,8 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className='max-w-4xl mx-auto'>
-      <SectionWrapper>
+    <SectionWrapper>
+      <div className='max-w-4xl mx-auto'>
         <SectionTitle
           title='L Rakesh Singh'
           subTitle='      Crafting code and solving real-world problems.'
@@ -44,7 +44,7 @@ export default function Home() {
           </Link>
         </div>
         <PageNavigation />
-      </SectionWrapper>
-    </div>
+      </div>
+    </SectionWrapper>
   );
 }

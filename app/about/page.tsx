@@ -4,8 +4,8 @@ import SectionWrapper from '@/components/shared/SectionWrapper';
 
 export default function About() {
   return (
-    <div className='max-w-4xl mx-auto'>
-      <SectionWrapper>
+    <SectionWrapper>
+      <div className='max-w-4xl mx-auto'>
         <SectionTitle
           title='About L Rakesh Singh'
           subTitle='    More than just a title—let’s dive deeper!'
@@ -26,7 +26,7 @@ export default function About() {
         </p>
 
         <PageNavigation />
-      </SectionWrapper>
-    </div>
+      </div>
+    </SectionWrapper>
   );
 }
