@@ -17,11 +17,11 @@ const Header = () => {
   return (
     <header className='flex items-center justify-between px-6 py-4 border-b border-border bg-background/70 backdrop-blur-xl sticky top-0 z-50'>
       <div className='flex items-center gap-10'>
-        <div className='flex items-center gap-4 font-semibold text-lg'>
+        <div className='flex items-center gap-4 font-bold text-lg'>
           rakezt.is-a-dev
         </div>
 
-        <nav className='cursor-pointer flex items-center gap-4 text-sm text-muted-foreground'>
+        <nav className='cursor-pointer flex items-center gap-4  text-m text-muted-foreground'>
           <Link href='/' className='hover:text-primary transition'>
             Home
           </Link>

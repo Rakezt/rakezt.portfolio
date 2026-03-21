@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/zHeader';
 import { ThemeProvider } from 'next-themes';
 import CommandMenu from '@/components/shared/CommandMenu';
+import PageWrapper from '@/components/shared/PageWrapper';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,7 +25,9 @@ export default function RootLayout({
           <CommandMenu />
           <div className='flex'>
             <Sidebar />
-            <main className='flex-1 px-16 py-12'>{children}</main>
+            <main className='flex-1 pl-30 py-10 '>
+              <PageWrapper>{children}</PageWrapper>
+            </main>
           </div>
           <Footer />
         </ThemeProvider>

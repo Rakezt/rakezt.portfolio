@@ -3,6 +3,9 @@
 /* ===============================
    THEME VARIABLES
 ================================ */
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   /* Base */
