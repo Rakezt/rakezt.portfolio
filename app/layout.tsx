@@ -6,6 +6,7 @@ import Header from '@/components/layout/zHeader';
 import { ThemeProvider } from 'next-themes';
 import CommandMenu from '@/components/shared/CommandMenu';
 import PageWrapper from '@/components/shared/PageWrapper';
+import ScrollToTop from '@/components/shared/ScrollToTop';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -21,11 +22,12 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+          <ScrollToTop />
           <Header />
           <CommandMenu />
           <div className='flex'>
             <Sidebar />
-            <main className='flex-1 ml-64 py-10 px-6'>
+            <main className='flex-1 ml-70 py-10 px-6'>
               <PageWrapper>
                 <div className='max-w-5xl mx-auto w-full px-6'>{children}</div>
               </PageWrapper>

@@ -1,11 +1,23 @@
 import { SectionTitle } from '@/components/shared/SectionTitle';
 import PortfolioStats from '@/components/shared/PortfolioStats';
-import GithubCalendarSection from '@/components/shared/GithubCalendar';
 import PageNavigation from '@/components/shared/PageNavigation';
-import GithubStats from '@/components/shared/GithubStatsCard';
 import SectionWrapper from '@/components/shared/SectionWrapper';
+import dynamic from 'next/dynamic';
 
 export default function StatsPage() {
+  const GithubCalendarSection = dynamic(
+    () => import('@/components/shared/GithubCalendar'),
+    {
+      loading: () => <div className='animate-pulse h-40 bg-muted rounded-lg' />,
+    },
+  );
+  const GithubStats = dynamic(
+    () => import('@/components/shared/GithubStatsCard'),
+    {
+      loading: () => <div className='animate-pulse h-40 bg-muted rounded-lg' />,
+    },
+  );
+
   return (
     <div className='max-w-4xl mx-auto'>
       <SectionWrapper>

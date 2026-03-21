@@ -21,7 +21,6 @@ export default function CommandMenu() {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
-  // ✅ Open with CMD + K / CTRL + K
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
@@ -40,7 +39,6 @@ export default function CommandMenu() {
       onOpenChange={setOpen}
       className='fixed inset-0 z-50 flex items-start justify-center pt-[10%] bg-black/40 backdrop-blur-sm'
     >
-      {/* ✅ Accessibility fix */}
       <VisuallyHidden>
         <DialogTitle>Search Sections</DialogTitle>
       </VisuallyHidden>
@@ -57,7 +55,6 @@ export default function CommandMenu() {
         animate-in fade-in zoom-in-95
       '
       >
-        {/* 🔍 Input */}
         <div className='flex items-center border-b px-3'>
           <Command.Input
             placeholder='Search anything...'
@@ -65,12 +62,10 @@ export default function CommandMenu() {
           />
         </div>
 
-        {/* ❌ Empty */}
         <Command.Empty className='p-4 text-sm text-muted-foreground'>
           No results found.
         </Command.Empty>
 
-        {/* 📂 List */}
         <Command.List className='max-h-[300px] overflow-y-auto p-2'>
           <Command.Group heading='Navigation'>
             {sections.map((item) => {
@@ -99,7 +94,6 @@ export default function CommandMenu() {
           </Command.Group>
         </Command.List>
 
-        {/* ⌨ Footer */}
         <div className='flex justify-between items-center px-3 py-2 text-xs text-muted-foreground border-t'>
           <span>↑ ↓ to navigate</span>
           <span>Enter to select</span>
