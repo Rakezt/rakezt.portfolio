@@ -25,8 +25,10 @@ export default function RootLayout({
           <CommandMenu />
           <div className='flex'>
             <Sidebar />
-            <main className='flex-1 pl-30 py-10 '>
-              <PageWrapper>{children}</PageWrapper>
+            <main className='flex-1 pl-30 py-10'>
+              <PageWrapper>
+                <div className='max-w-5xl mx-auto w-full px-6'>{children}</div>
+              </PageWrapper>
             </main>
           </div>
           <Footer />
