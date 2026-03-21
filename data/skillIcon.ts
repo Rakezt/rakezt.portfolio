@@ -21,6 +21,7 @@ import {
   SiSocketdotio,
   SiJsonwebtokens,
   SiMongoose,
+  SiFramer,
 } from 'react-icons/si';
 
 import { TbApi } from 'react-icons/tb';
@@ -41,7 +42,7 @@ export const skillIcons: Record<string, IconType> = {
   'REST APIs': TbApi,
   'JWT Authentication': SiJsonwebtokens,
   'Socket.IO': SiSocketdotio,
-
+  'Framer Motion': SiFramer,
   MongoDB: SiMongodb,
   Mongoose: SiMongoose,
 

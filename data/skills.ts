@@ -11,6 +11,7 @@ export const skills = [
       'MUI',
       'DaisyUI',
       'shadcn/ui',
+      'Framer Motion',
     ],
   },
   {
