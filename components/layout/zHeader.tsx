@@ -50,14 +50,7 @@ const Header = () => {
       </div>
       <div className='flex items-center gap-6'>
         <div
-          onClick={() =>
-            window.dispatchEvent(
-              new KeyboardEvent('keydown', {
-                key: 'k',
-                metaKey: true,
-              }),
-            )
-          }
+          onClick={() => window.dispatchEvent(new Event('open-command'))}
           className='cursor-pointer hidden md:flex items-center border border-border rounded-lg px-3 py-1.5 w-[280px] bg-muted/40 transition-all duration-200 hover:bg-muted/60 hover:shadow-[0_0_0_2px_hsl(var(--glow-color)/0.2)]'
         >
           <Search size={16} className='text-muted-foreground' />
