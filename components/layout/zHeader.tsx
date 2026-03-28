@@ -1,12 +1,13 @@
 'use client';
 
-import { Github, Music, Search } from 'lucide-react';
+import { Music, Search } from 'lucide-react';
 import { Input } from '../ui/input';
 import Link from 'next/link';
 import { useGetTime } from '@/components/shared/useGetTime';
 import { ThemeToggle } from '../shared/ThemeToggle';
 import { useAudio } from '../shared/useAudio';
 import { Button } from '../ui/button';
+import MobileSidebar from './MobileSidebar';
 
 const Header = () => {
   const time = useGetTime();
@@ -15,13 +16,11 @@ const Header = () => {
   });
 
   return (
-    <header className='flex items-center justify-between px-6 py-4 border-b border-border bg-background/70 backdrop-blur-xl sticky top-0 z-50'>
+    <header className='flex items-center justify-between px-4 md:px-6 py-4 border-b border-border bg-background/70 backdrop-blur-xl sticky top-0 z-50'>
       <div className='flex items-center gap-10'>
-        <div className='flex items-center gap-4 font-bold text-lg'>
-          rakezt.is-a-dev
-        </div>
+        <div className='font-bold text-base md:text-lg'>rakezt.is-a-dev</div>
 
-        <nav className='cursor-pointer flex items-center gap-4  text-m text-muted-foreground'>
+        <nav className='hidden md:flex cursor-pointer items-center gap-4 text-m text-muted-foreground'>
           <Link href='/' className='hover:text-primary transition'>
             Home
           </Link>
@@ -48,7 +47,7 @@ const Header = () => {
           </a>
         </nav>
       </div>
-      <div className='flex items-center gap-6'>
+      <div className='flex items-center gap-2 md:gap-6'>
         <div
           onClick={() => window.dispatchEvent(new Event('open-command'))}
           className='cursor-pointer hidden md:flex items-center border border-border rounded-lg px-3 py-1.5 w-[280px] bg-muted/40 transition-all duration-200 hover:bg-muted/60 hover:shadow-[0_0_0_2px_hsl(var(--glow-color)/0.2)]'
@@ -77,6 +76,7 @@ const Header = () => {
         </Button>
 
         <ThemeToggle />
+        <MobileSidebar />
       </div>
     </header>
   );

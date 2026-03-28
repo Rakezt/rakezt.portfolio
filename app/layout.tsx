@@ -26,10 +26,12 @@ export default function RootLayout({
           <Header />
           <CommandMenu />
           <div className='flex'>
-            <Sidebar />
-            <main className='flex-1 ml-70 py-12 px-6'>
+            <div className='hidden md:block'>
+              <Sidebar />
+            </div>
+            <main className='flex-1 md:ml-64 md:py-12 md:px-6 py-8 px-4'>
               <PageWrapper>
-                <div className='max-w-5xl mx-auto w-full px-6'>{children}</div>
+                <div className='max-w-5xl mx-auto w-full'>{children}</div>
               </PageWrapper>
             </main>
           </div>

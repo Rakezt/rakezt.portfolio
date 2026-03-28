@@ -15,7 +15,7 @@ export default function Home() {
           subTitle='      Crafting code and solving real-world problems.'
         />
 
-        <p className='text-lg text-muted-foreground leading-relaxed max-w-3xl mb-8'>
+        <p className='text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mb-8'>
           I’m a full-stack Software Engineer who enjoys building modern web
           applications with technologies like Next.js, React.js, TypeScript,
           Redux, Tailwind CSS, Node.js, Express, Socket.IO and MongoDB. I focus
@@ -24,7 +24,7 @@ export default function Home() {
           deliver reliable software.
         </p>
 
-        <div className='flex items-center gap-6'>
+        <div className='flex items-center gap-6 flex-wrap mt-6'>
           <Button
             asChild
             className='bg-primary text-[hsl(var(--accent))] hover:bg-primary/90'
