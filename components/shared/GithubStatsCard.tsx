@@ -6,7 +6,7 @@ export default async function GithubStats() {
     await getGithubStats();
 
   return (
-    <div className='grid md:grid-cols-3 gap-6 mt-10'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
       <StatsCard title='Hireable' value={hireable ? 'No' : 'Yes'} />
 
       <StatsCard title='Total Public Repositories' value={public_repos} />

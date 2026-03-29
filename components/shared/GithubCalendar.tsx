@@ -19,13 +19,15 @@ export default function GithubCalendarSection() {
   }
 
   return (
-    <div className='border rounded-xl p-6 mt-10'>
-      <GitHubCalendar
-        username='Rakezt'
-        blockSize={14}
-        blockMargin={4}
-        fontSize={14}
-      />
+    <div className='border rounded-xl p-4 md:p-6 mt-10 overflow-x-auto'>
+      <div className='min-w-[600px]'>
+        <GitHubCalendar
+          username='Rakezt'
+          blockSize={14}
+          blockMargin={4}
+          fontSize={14}
+        />
+      </div>
     </div>
   );
 }
