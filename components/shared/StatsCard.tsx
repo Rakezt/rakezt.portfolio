@@ -10,12 +10,15 @@ interface Props {
 export default function StatsCard({ title, value, icon }: Props) {
   return (
     <div className='border rounded-xl p-6 bg-background shadow-sm hover:shadow-md transition'>
-      <div className='flex items-center gap-2 text-muted-foreground'>
-        {icon}
-        <span>{title}</span>
+      <div className='flex items-center justify-between text-muted-foreground'>
+        <div className='flex items-center gap-2'>
+          {icon}
+          <span className='text-sm md:text-base'>{title}</span>
+        </div>
       </div>
-
-      <div className='text-4xl font-bold mt-4'>{value}</div>
+      <div className='text-3xl md:text-4xl font-bold mt-4 tracking-tight'>
+        {value}
+      </div>
     </div>
   );
 }

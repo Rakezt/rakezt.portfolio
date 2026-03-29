@@ -5,9 +5,9 @@ import { GitHubCalendar } from 'react-github-calendar';
 
 function useMounted() {
   return useSyncExternalStore(
-    () => () => {}, // no-op subscribe
-    () => true, // client snapshot
-    () => false, // server snapshot
+    () => () => {},
+    () => true,
+    () => false,
   );
 }
 
@@ -19,7 +19,7 @@ export default function GithubCalendarSection() {
   }
 
   return (
-    <div className='border rounded-xl p-4 md:p-6 mt-10 overflow-x-auto'>
+    <div className='border border-border rounded-2xl p-4 md:p-6 mt-10 overflow-x-auto'>
       <div className='min-w-[600px]'>
         <GitHubCalendar
           username='Rakezt'
