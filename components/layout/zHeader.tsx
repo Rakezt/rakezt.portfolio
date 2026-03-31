@@ -18,9 +18,11 @@ const Header = () => {
   return (
     <header className='flex items-center justify-between px-4 md:px-6 py-4 border-b border-border bg-background/70 backdrop-blur-xl sticky top-0 z-50'>
       <div className='flex items-center gap-10'>
-        <h1 className='text-3xl md:text-4xl font-bold tracking-tight'>
-          rakezt.is-a-dev
-        </h1>
+        <Link href='/'>
+          <h1 className='text-3xl md:text-4xl font-bold tracking-tight'>
+            rakezt.is-a-dev
+          </h1>
+        </Link>
 
         <nav className='hidden md:flex cursor-pointer items-center gap-4 text-m text-muted-foreground'>
           <Link href='/' className='hover:text-primary transition'>
