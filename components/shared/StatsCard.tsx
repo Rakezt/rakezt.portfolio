@@ -15,7 +15,7 @@ export default function StatsCard({ title, value, icon }: Props) {
         <span>{title}</span>
       </div>
 
-      <div className='text-4xl font-bold mt-4'>{value}</div>
+      <div className='text-2xl font-bold mt-4'>{value}</div>
     </div>
   );
 }
