@@ -19,7 +19,7 @@ export default function StatsPage() {
   );
 
   return (
-    <div className='max-w-4xl mx-auto space-y-10'>
+    <div className='max-w-4xl mx-auto'>
       <SectionWrapper>
         <SectionTitle
           title='About this portfolio'
@@ -27,7 +27,7 @@ export default function StatsPage() {
         />
 
         <PortfolioStats />
-        <div className='mt-16 border-t border-border pt-10'>
+        <div className='mt-10'>
           <SectionTitle
             title='GitHub Stats'
             subTitle='Insights and metrics about my GitHub profile'
