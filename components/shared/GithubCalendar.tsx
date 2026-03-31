@@ -14,7 +14,7 @@ function useMounted() {
 
 export default function GithubCalendarSection() {
   const mounted = useMounted();
-  const isMobile = useMediaQuery('(max-width: 768px)');
+  const isMobile = useMediaQuery('(max-width: 800px)');
 
   if (!mounted) {
     return <div className='w-9 h-9' />;
@@ -27,7 +27,7 @@ export default function GithubCalendarSection() {
           username='Rakezt'
           blockSize={14}
           blockMargin={4}
-          fontSize={14}
+          fontSize={10}
           transformData={isMobile ? (data) => data.slice(-110) : undefined}
         />
       </div>
