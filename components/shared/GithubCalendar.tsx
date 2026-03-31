@@ -6,9 +6,9 @@ import { useMediaQuery } from './useMediaQuery';
 
 function useMounted() {
   return useSyncExternalStore(
-    () => () => {}, // no-op subscribe
-    () => true, // client snapshot
-    () => false, // server snapshot
+    () => () => {},
+    () => true,
+    () => false,
   );
 }
 
@@ -28,7 +28,7 @@ export default function GithubCalendarSection() {
           blockSize={14}
           blockMargin={4}
           fontSize={14}
-          transformData={isMobile ? (data) => data.slice(-140) : undefined}
+          transformData={isMobile ? (data) => data.slice(-110) : undefined}
         />
       </div>
     </div>
