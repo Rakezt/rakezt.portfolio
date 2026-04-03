@@ -7,7 +7,7 @@ export default function About() {
     <div className='max-w-4xl mx-auto'>
       <SectionWrapper>
         <SectionTitle
-          title='About L Rakesh Singh'
+          title='About me'
           subTitle='    More than just a title—let’s dive deeper!'
         />
 
