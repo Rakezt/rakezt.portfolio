@@ -3,7 +3,7 @@ import { SectionTitle } from '@/components/shared/SectionTitle';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import { Button } from '@/components/ui/button';
 import { RESUME_LINK } from '@/lib/constants';
-import { Mail, ArrowUpRight } from 'lucide-react';
+import { Mail, ArrowUpRight, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -12,16 +12,23 @@ export default function Home() {
       <SectionWrapper>
         <SectionTitle
           title='L Rakesh Singh'
-          subTitle='      Crafting code and solving real-world problems.'
+          subTitle='Full Stack Developer (MERN)'
         />
 
         <p className='text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mb-8'>
-          I’m a full-stack Software Engineer who enjoys building modern web
-          applications with technologies like Next.js, React.js, TypeScript,
-          Redux, Tailwind CSS, Node.js, Express, Socket.IO and MongoDB. I focus
-          on creating scalable, responsive, and user-friendly solutions while
-          leveraging DevOps practices to improve development workflows and
-          deliver reliable software.
+          Over the past 3+ years, I’ve worked on developing and optimizing web
+          applications that focus on performance, scalability, and user
+          experience. My core stack includes{' '}
+          <strong>
+            React.js, Next.js, Javascript, Express.js, Node.js, and MongoDB
+          </strong>
+          , where I focus on writing maintainable code and designing systems
+          that scale efficiently. I’ve improved API performance, handled
+          real-time features using WebSockets, and built production-level
+          applications with strong backend integration.
+        </p>
+        <p className='text-sm text-muted-foreground mb-6'>
+          Focused on delivering reliable systems, not just writing code.
         </p>
 
         <div className='flex items-center gap-6 flex-wrap mt-6'>
@@ -34,7 +41,12 @@ export default function Home() {
               Get Resume
             </a>
           </Button>
-
+          <Button asChild variant='default'>
+            <Link href='/projects'>
+              <Briefcase className='ml-2 h-4 w-4' />
+              View Projects
+            </Link>
+          </Button>
           <Link
             href='mailto:rakezt.k@email.com'
             className='flex items-center gap-2 text-muted-foreground hover:text-primary'
