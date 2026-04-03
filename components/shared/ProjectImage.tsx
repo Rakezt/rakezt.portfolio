@@ -7,7 +7,7 @@ export const ProjectImage = ({ project }: { project: Project }) => {
   const [loading, setLoading] = useState(true);
   return (
     <>
-      <div className='relative mt-4 w-full h-[250px]'>
+      <div className='relative mt-4 w-full h-[280px]'>
         {loading && (
           <div className='absolute inset-0 animate-pulse bg-gray-300 rounded-lg' />
         )}
