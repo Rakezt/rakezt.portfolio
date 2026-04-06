@@ -9,9 +9,9 @@ import PageWrapper from '@/components/shared/PageWrapper';
 import ScrollToTop from '@/components/shared/ScrollToTop';
 
 export const metadata: Metadata = {
-  title: 'Rakezt | Full Stack Developer',
+  title: 'L Rakesh Singh | Full Stack Developer',
   description:
-    'Full Stack Developer portfolio of Rakezt specializing in React, Next.js, Node.js, and modern scalable web applications.',
+    'Full Stack Developer portfolio of L Rakesh Singh specializing in React, Next.js, Node.js, and modern scalable web applications.',
 
   metadataBase: new URL('https://lrakeztportfolio.netlify.app'),
 
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Rakezt Portfolio',
+    title: 'L Rakesh Portfolio',
     description: 'Full Stack Developer - React, Next.js projects',
     url: 'https://lrakeztportfolio.netlify.app',
-    siteName: 'Rakezt Portfolio',
+    siteName: 'L Rakesh Portfolio',
     images: [
       {
         url: '/og-image.png',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Rakezt Portfolio',
+    title: 'L Rakesh Portfolio',
     description: 'Check out my developer portfolio',
     images: ['/og-image.png'],
   },
