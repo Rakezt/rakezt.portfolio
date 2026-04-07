@@ -1,4 +1,4 @@
-export const projects = [
+export const projects: Project[] = [
   {
     slug: 'zing',
     title: 'Zing ',
@@ -18,6 +18,7 @@ export const projects = [
     img: 'https://res.cloudinary.com/detngmiyp/image/upload/v1773914805/zing_xhk0t8.png',
     github: 'https://github.com/Rakezt/ZingFE',
     demo: 'https://zing-app.netlify.app/',
+    type: 'personal',
   },
   {
     slug: 'bang-bang',
@@ -36,6 +37,7 @@ export const projects = [
     img: 'https://res.cloudinary.com/detngmiyp/image/upload/v1773914806/bang_acnu0p.png',
     github: 'https://github.com/Rakezt/e-com-app',
     demo: 'https://rakeztecommerce.netlify.app/',
+    type: 'personal',
   },
   {
     slug: 'expense-ai',
@@ -46,6 +48,7 @@ export const projects = [
     img: 'https://res.cloudinary.com/detngmiyp/image/upload/v1773914806/expense_mg29n5.png',
     github: 'https://github.com/Rakezt/lets-track-expense-AI',
     demo: 'https://lets-track-expenses-ai.netlify.app/',
+    type: 'personal',
   },
   {
     slug: 'rakezt-bot',
@@ -63,6 +66,7 @@ export const projects = [
     img: 'https://res.cloudinary.com/detngmiyp/image/upload/v1773914805/chatbot_senpyp.png',
     github: 'https://github.com/Rakezt/gemini-chatbot-FE',
     demo: 'https://rakezt-chatbot.netlify.app/login',
+    type: 'personal',
   },
   {
     slug: 'live-poller',
@@ -82,6 +86,53 @@ export const projects = [
     img: 'https://res.cloudinary.com/detngmiyp/image/upload/v1773915398/poll_eu8pus.png',
     github: 'https://github.com/Rakezt/live-poller-fe',
     demo: 'https://live-poller.netlify.app/login',
+    type: 'personal',
+  },
+  {
+    slug: 'ai-interview',
+    title: 'AI Interview System',
+    description:
+      'A real-time interview platform where recruiter update candidate requirement and AI provide the list after screening/evaluating round.',
+    tech: [
+      'React.js',
+      'Typescript',
+      'MUI',
+      'Tailwind Css',
+      'Node.js',
+      'Express.js',
+      'Socket.IO',
+      'Redis',
+      'MongoDB',
+    ],
+    img: 'https://res.cloudinary.com/detngmiyp/image/upload/q_auto/f_auto/v1775558959/Image_not_available_qggcyy.png',
+    type: 'professional',
+  },
+  {
+    slug: 'lms-platform',
+    title: 'LMS Platform',
+    description:
+      'Developed course management system, dashboards, and secure authentication for an EdTech client.',
+    tech: [
+      'Next.js',
+      'Typescript',
+      'MUI',
+      'Tailwind Css',
+      'Node.js',
+      'Express.js',
+      'Redis',
+      'MongoDB',
+    ],
+    img: 'https://res.cloudinary.com/detngmiyp/image/upload/q_auto/f_auto/v1775558959/Image_not_available_qggcyy.png',
+    type: 'professional',
+  },
+  {
+    slug: 'loan-platform',
+    title: 'Loan Processing Platform',
+    description:
+      'Developed loan onboarding flows and secure backend modules for FinTech platform.',
+    tech: ['React.js', 'Tailwind Css', 'Node.js', 'Express.js', 'MongoDB'],
+    img: 'https://res.cloudinary.com/detngmiyp/image/upload/q_auto/f_auto/v1775558959/Image_not_available_qggcyy.png',
+    type: 'professional',
   },
 ];
 
@@ -91,6 +142,7 @@ export type Project = {
   description: string;
   tech: string[];
   img: string;
-  github: string;
-  demo: string;
+  github?: string;
+  demo?: string;
+  type: 'professional' | 'personal';
 };
