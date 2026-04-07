@@ -46,23 +46,34 @@ export default async function ProjectDetail({
           ))}
         </div>
 
-        <div className='flex gap-4'>
-          <a
-            href={project.demo}
-            target='_blank'
-            className='px-4 py-2 bg-primary  rounded-md text-[hsl(var(--accent))]'
-          >
-            Live Demo
-          </a>
+        {project.type === 'personal' && (
+          <div className='flex gap-4'>
+            {project.demo && (
+              <a
+                href={project.demo}
+                target='_blank'
+                className='px-4 py-2 bg-primary rounded-md text-[hsl(var(--accent))]'
+              >
+                Live Demo
+              </a>
+            )}
 
-          <a
-            href={project.github}
-            target='_blank'
-            className='px-4 py-2 border rounded-md'
-          >
-            Github
-          </a>
-        </div>
+            {project.github && (
+              <a
+                href={project.github}
+                target='_blank'
+                className='px-4 py-2 border rounded-md'
+              >
+                Github
+              </a>
+            )}
+          </div>
+        )}
+        {project.type === 'professional' && (
+          <p className='text-sm text-muted-foreground'>
+            Details limited due to client confidentiality.
+          </p>
+        )}
       </SectionWrapper>
     </div>
   );
